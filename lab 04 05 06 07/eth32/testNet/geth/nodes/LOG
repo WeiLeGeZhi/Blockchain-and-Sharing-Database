@@ -1,0 +1,76 @@
+=============== Apr 2, 2024 (PDT) ===============
+02:55:09.768050 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+02:55:09.795349 db@open opening
+02:55:09.801046 version@stat F·[] S·0B[] Sc·[]
+02:55:09.816058 db@janitor F·2 G·0
+02:55:09.816103 db@open done T·20.736152ms
+04:20:45.739277 db@close closing
+04:20:45.740439 db@close done T·1.161629ms
+=============== Apr 2, 2024 (PDT) ===============
+04:36:17.632069 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+04:36:17.633642 version@stat F·[] S·0B[] Sc·[]
+04:36:17.633666 db@open opening
+04:36:17.633709 journal@recovery F·1
+04:36:17.634783 journal@recovery recovering @1
+04:36:17.636268 memdb@flush created L0@2 N·2 S·176B "loc..seq,v2":"version,v1"
+04:36:17.636644 version@stat F·[1] S·176B[176B] Sc·[0.25]
+04:36:17.638949 db@janitor F·3 G·0
+04:36:17.638964 db@open done T·5.293235ms
+04:50:30.677190 db@close closing
+04:50:30.677378 db@close done T·186.309µs
+=============== Apr 2, 2024 (PDT) ===============
+04:59:55.903986 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+04:59:55.904879 version@stat F·[1] S·176B[176B] Sc·[0.25]
+04:59:55.905055 db@open opening
+04:59:55.905195 journal@recovery F·1
+04:59:55.905741 journal@recovery recovering @3
+04:59:55.908178 memdb@flush created L0@5 N·1 S·159B "loc..seq,v4":"loc..seq,v4"
+04:59:55.911645 version@stat F·[2] S·335B[335B] Sc·[0.50]
+04:59:55.914835 db@janitor F·4 G·0
+04:59:55.914885 db@open done T·9.786286ms
+05:15:56.910037 db@close closing
+05:15:56.910441 db@close done T·399.696µs
+=============== Apr 6, 2024 (PDT) ===============
+01:28:14.732014 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+01:28:14.734021 version@stat F·[2] S·335B[335B] Sc·[0.50]
+01:28:14.734057 db@open opening
+01:28:14.734169 journal@recovery F·1
+01:28:14.752663 journal@recovery recovering @6
+01:28:14.756253 memdb@flush created L0@8 N·1 S·159B "loc..seq,v6":"loc..seq,v6"
+01:28:14.789479 version@stat F·[3] S·494B[494B] Sc·[0.75]
+01:28:14.803361 db@janitor F·5 G·0
+01:28:14.803406 db@open done T·69.340898ms
+01:29:58.690105 db@close closing
+01:29:58.690249 db@close done T·120.9µs
+=============== Apr 6, 2024 (PDT) ===============
+01:30:17.967656 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+01:30:17.968138 version@stat F·[3] S·494B[494B] Sc·[0.75]
+01:30:17.968182 db@open opening
+01:30:17.968254 journal@recovery F·1
+01:30:17.968957 journal@recovery recovering @9
+01:30:17.970558 memdb@flush created L0@11 N·1 S·159B "loc..seq,v8":"loc..seq,v8"
+01:30:17.971292 version@stat F·[4] S·653B[653B] Sc·[1.00]
+01:30:17.990747 db@janitor F·6 G·0
+01:30:17.990800 db@open done T·22.609031ms
+01:30:17.990967 table@compaction L0·4 -> L1·0 S·653B Q·9
+01:30:17.995046 table@build created L1@14 N·2 S·176B "loc..seq,v8":"version,v1"
+01:30:17.995101 version@stat F·[0 1] S·176B[0B 176B] Sc·[0.00 0.00]
+01:30:17.999174 table@compaction committed F-3 S-477B Ke·0 D·3 T·8.181523ms
+01:30:17.999273 table@remove removed @8
+01:30:17.999310 table@remove removed @5
+01:30:17.999338 table@remove removed @2
+02:56:31.859631 db@close closing
+02:56:31.859706 db@close done T·75.894µs
+=============== Apr 8, 2024 (PDT) ===============
+19:18:02.779498 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+19:18:02.781351 version@stat F·[0 1] S·176B[0B 176B] Sc·[0.00 0.00]
+19:18:02.781563 db@open opening
+19:18:02.781746 journal@recovery F·1
+19:18:02.823050 journal@recovery recovering @12
+19:18:02.830569 memdb@flush created L0@15 N·1 S·159B "loc..seq,v10":"loc..seq,v10"
+19:18:02.852785 version@stat F·[1 1] S·335B[159B 176B] Sc·[0.25 0.00]
+19:18:02.855834 db@janitor F·5 G·1
+19:18:02.855870 db@janitor removing table-11
+19:18:02.855967 db@open done T·74.391258ms
+19:46:37.978442 db@close closing
+19:46:37.979251 db@close done T·803.866µs
