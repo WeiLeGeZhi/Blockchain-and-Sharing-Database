@@ -93,6 +93,45 @@ for id in all_id:
     except Exception as e:
          print_error("error: {}\nselect_id(id={}) failed!".format(e, id))
 
+# 测试寻找年龄最小的学生
+print_info("\n[Test get_id_by_min_age]")
+try:
+    min_age_id = student_contract.functions.get_id_by_min_age().call()
+    min_age = min(students.values(), key=lambda x: x[3])[0]  # 获取年龄最小的学生的年龄
+    if min_age_id == min_age:
+        add_point(10, "get_id_by_min_age success! Min age id: {}".format(min_age_id))
+    else:
+        print_error("get_id_by_min_age failed! Min age id mismatch: {} != {}".format(min_age_id, min_age))
+except Exception as e:
+    print_error("error: {}\nget_id_by_min_age error!".format(e))
+
+# 测试修改学生院系
+print_info("\n[Test update_dept_by_id]")
+try:
+    # 选择一个随机的学号和新的院系信息
+    update_id = random.choice(list(students.keys()))
+    new_dept = random_dept()
+
+    # 调用更新函数
+    tx_hash = student_contract.functions.update_dept_by_id(update_id, new_dept).transact()
+    tx_receipt = eth.wait_for_transaction_receipt(tx_hash)
+
+    # 获取更新后的学生信息
+    updated_student = student_contract.functions.select_id(update_id).call()
+    updated_dept = updated_student[4]
+
+    # 验证事件是否被触发
+    update_event = student_contract.events.Update.get_logs()[0]
+    update_id_from_event = update_event.get('args').get('id')
+    updated_dept_from_event = update_event.get('args').get('dept')
+
+    if update_id_from_event == update_id and updated_dept_from_event == new_dept:
+        add_point(10, "update_dept_by_id success! Updated dept: {}".format(updated_dept))
+    else:
+        print_error("update_dept_by_id failed! Updated dept mismatch: {} != {}".format(updated_dept, new_dept))
+except Exception as e:
+    print_error("error: {}\nupdate_dept_by_id error!".format(e))
+
 # 测试删除
 print_info("\n[Test delete_by_id and exist_by_id]")
 delete_id_list = random.sample(all_id, len(all_id) // 2)

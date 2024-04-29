@@ -1,6 +1,7 @@
 from web3 import Web3
 from web3.contract import Contract
 from solcx import compile_standard, install_solc
+from typing import Tuple
 
 # Install Solidity compiler.
 _solc_version = "0.7.6"
@@ -34,7 +35,7 @@ def deploy(contract_name, abi, bytecode, *args) -> Contract:
     return deployed_contract
 
 """ 编译合约 """
-def compile(contract_name) -> tuple[str, str]:
+def compile(contract_name) -> Tuple[str, str]:
     contract_sol = contract_name + '.sol'
     contract_content = read_file(contract_sol)
     # Compile smart contract with solcx.
