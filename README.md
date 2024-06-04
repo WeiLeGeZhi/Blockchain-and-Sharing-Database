@@ -26,4 +26,4 @@ WEN Zhaohe's repository for the course Blockchain &amp; Sharing Database
   - Lab 11:Fabric存证业务链码
 - 共识算法相关实验
   - Lab 12:PBFT共识算法简单实现
-- 期末大项目：
+- 期末大项目：基于区块链的投票系统
